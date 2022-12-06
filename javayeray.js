@@ -316,7 +316,7 @@ pagoTotal(precio, impuesto) */
 Escibe una función que devuelva el siglo al que correponde un 
 año que se la pasa como argumento. El siglo 1 va del año 1 al 100, el siglo 2 va del 101 al 200.... */
 
-//declaramos la variable de ingreso del año
+/* //declaramos la variable de ingreso del año
 let añoRandom = parseInt(prompt("Escribe el año al que quieras saber su siglo: "))
 //Establecemos una función con el argumento de año
 function conocerSiglo(año){
@@ -326,7 +326,7 @@ function conocerSiglo(año){
     return conocerSiglo
 }
 //Mostramos el resultado con un mensje dentro de una alerta 
-alert(`Pertenece al siglo ${conocerSiglo(añoRandom)}`)
+alert(`Pertenece al siglo ${conocerSiglo(añoRandom)}`) */
 
 //-------------------------------------ARRAYS-------------------------------------
 /* 1.
@@ -348,6 +348,26 @@ Escribe una función que determina si la letra que se le pasa como argumento
 se encuentra contenida dentro de un array de letras que se le pasa como segundo argumento.
 Se trata de resolverlo sin usar métodos del objeto array, solo el dato tipo array. */
 
+/* //Declaramos las variables
+var ingresoLetra, listaLetras, incluye;
+//Le pedimos al usuario que increse una letra
+ingresoLetra = prompt('Ingresa una letra')
+//Creamos la lista con algunas letras
+listaLetras = ['a','b','c','d','e','f','g','h','i','j']
+//Creamos la finción con dos argumentos
+function buscadorLetras(letras ,letra){
+  //Usamos los argumentos para identificar si letras incluye letra dentro de sí
+    incluye = letras.includes(letra)
+    //Si la contiene el resultado será true, por tanto
+    if(incluye===true){
+        //Activa una alerta con un mensaje de la letra que se encuentra
+        alert(`La letra "${letra}" se encuentra dentro de la lista`)
+    } else{
+        //Activa una alerta con un mensaje de la letra diciendo que no se encuentra
+        alert(`La letra "${letra}" no se encuentra dentro de la lista`)
+    }
+}
+buscadorLetras(listaLetras, ingresoLetra) */
 
 
 //-------------------------------------CLASES Y OBJETOS-------------------------------------
@@ -357,7 +377,19 @@ calificaciones de un alumno. El curso contiene tres materias: Ingles, programaci
 objeto contendrá el nombre del alumno y la calificación en cada una de ellas. El script imprimirá
 el nombre y la media de sus calificaciones. */
 
-
+/* //Para crear un objeto lo declarams dentro de un avariable y abrimos llaves
+var calificaciones = {
+    //Definimos las propiedades
+    nombreAlumno: 'Juan',
+    ingles: 3.4,
+    programacion: 4.5,
+    htm: 3.7,
+}
+//Creamos una variable para identificar la media haciendo uso del nombre del objeto junto
+//a su propiedad por medio de una operación.
+var media = (calificaciones.ingles + calificaciones.programacion + calificaciones.htm)/3
+//Imprimimos el resultado
+console.log(`La media de ${calificaciones.nombreAlumno} es de ${media}`) */
 
 //---------------------------------------------------------------------------
 /* 2.
@@ -367,11 +399,25 @@ nombre
 sesiones
 numsesioens
 El nombre es el de la persona, en los sesiones se almacenará el numero de 
-kilometros recorridos en cada sesión y numsesiones contien el númeor de sesiones anotadas.
+kilometros recorridos en cada sesión y numsesiones contien el número de sesiones anotadas.
 Tiene dos métodos:
 anotar: anota los kilómetros
 media: calcula la media de kilómetros recorridos */
 
+var kmPorSesion = {
+    nombre: 'Juan',
+    sesion1: 2.4,
+    sesion2: 3,
+    sesion3: 2.7,
+    sesion4: 2.9,
+    numSesiones: 4,
+    anotar:()=>{
+        
+    },
+    media: ()=>{
+
+    }
+}
 
 
 //-------------------------------------LO BÁSICO DEL DOOM-------------------------------------
