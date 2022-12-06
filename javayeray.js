@@ -411,22 +411,21 @@ var kmPorSesion = {
     sesion3: 2.7,
     sesion4: 2.9,
     numSesiones: 4,
-    anotar:()=>{
-        
+    anotar:(km1, km2,  km3, km4)=>{
+        var totalKm = (km1+km2+km3+km4)
+        return totalKm
     },
-    media: ()=>{
-
+    media: (sesiones, kms)=>{
+        var mediana = kms/sesiones
+        return mediana
     }
 }
 
 
 //-------------------------------------LO BÁSICO DEL DOOM-------------------------------------
-/* 1.
+/* 1. y 2.
 Tienes la página web modelo que debe cambiar el color del titular del negro actual a rojo y además
 debe quedar centrado. El único cambio será en el bloque cambiar y el código de función cambiar() */
-
-
-
 //---------------------------------------------------------------------------
 /* 2.
 En la página web modelo ves que tienes un titular Hola Mundo. Se trata de añadir una función
@@ -435,3 +434,5 @@ El unico cambio necesario es el bloque con el texto cambiar y  completar la func
 aparece en el código de la página.
 ALGO DE EVENTOS 
 Cambio HTML */
+
+//Líneas 70-76 doom.html
