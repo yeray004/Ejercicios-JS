@@ -208,7 +208,7 @@ valorEntero = parseInt(prompt('Escriba cualquier valor entero'));
 //iniciamos el loop - tendrá en cueta las veces que crea una fila
 //de acuerdo al valorEntero 
 for (let fila = 0; fila < valorEntero; fila++){
-    cadena=''//llamamos a la variavle cadena
+    cadena=''//llamamos a la variavble cadena
     for(ancho = 0; ancho <= fila; ancho++){
         //por cada vez que se cumpla el primer loop antes de llegar a su
         //condición se repite el segundo loop
@@ -221,7 +221,7 @@ for (let fila = 0; fila < valorEntero; fila++){
 
 //-------------------------------------BUCLES WHILE-------------------------------------
 /* 1.
-En este bucle vamos a generar una lista c on los 20 primeros números pares */
+En este bucle vamos a generar una lista con los 20 primeros números pares */
 
 /* //declaramos las variables
 var lista, par;
@@ -246,14 +246,14 @@ while(lista<40){
 Un ejemplo típico de bucle es averiguar si un número es primo, es decir, si solo es
 divisible po 1 y por si mismo. */
 
-/* var num = parseInt(prompt('Escriba un número entero'))
+/* var num = parseInt(prompt('Escriba un número entero diferente a 1'))
 var direfenteDeUno = 2
 while(direfenteDeUno<=num-1){
-    if(num%direfenteDeUno==0 || num === 1){
-        console.log('No es número primo')
+    if(num%direfenteDeUno==0){
+        console.log(`El número ${num} no es primo`)
     }
     else{
-        console.log('Es número primo')
+        console.log(`Es número ${num} es primo`)
     }
     break
 } */
@@ -261,10 +261,14 @@ while(direfenteDeUno<=num-1){
 
 //-------------------------------------BUCLES DO WHILE-------------------------------------
 /* 1.
-Realiza un script que le pida al usuario que telee la l e t r a A (en mayúscula) y mientras
+Realiza un script que le pida al usuario que teclee la letra A (en mayúscula) y mientras
 no lo haga se lo vuelva a pedir. Usa un bulce do.. while y la ventana alert para los mensajes */
 
-
+/* do{
+    var tecla = prompt('Teclea la letra "A"');
+}
+while (tecla != 'A')
+alert('Gracias parcer@ 👍') */
 
 //-------------------------------------FUNCIONES-------------------------------------
 /* 1.
@@ -377,19 +381,20 @@ calificaciones de un alumno. El curso contiene tres materias: Ingles, programaci
 objeto contendrá el nombre del alumno y la calificación en cada una de ellas. El script imprimirá
 el nombre y la media de sus calificaciones. */
 
-/* //Para crear un objeto lo declarams dentro de un avariable y abrimos llaves
-var calificaciones = {
-    //Definimos las propiedades
-    nombreAlumno: 'Juan',
-    ingles: 3.4,
-    programacion: 4.5,
-    htm: 3.7,
+/* //creamos una clase
+class claificaciones{
+    //creamos un cosntructor con los atributos solicitados
+    constructor (nombreAlumno, ingles, programacion, htm){
+        //Atributos
+        this.nombreAlumno = nombreAlumno;
+        this.ingles = ingles;
+        this.programacion = programacion;
+        this.htm = htm;
+    }
 }
-//Creamos una variable para identificar la media haciendo uso del nombre del objeto junto
-//a su propiedad por medio de una operación.
-var media = (calificaciones.ingles + calificaciones.programacion + calificaciones.htm)/3
-//Imprimimos el resultado
-console.log(`La media de ${calificaciones.nombreAlumno} es de ${media}`) */
+var alumno = new claificaciones('Juan', 3.4, 5, 3)
+//Imprimimos un mensaje con el nombre y la operación de su  promedio
+console.log(`El alumno ${alumno.nombreAlumno} tiene un promedio de ${(alumno.ingles + alumno.programacion + alumno.htm)/3}`) */
 
 //---------------------------------------------------------------------------
 /* 2.
@@ -404,23 +409,31 @@ Tiene dos métodos:
 anotar: anota los kilómetros
 media: calcula la media de kilómetros recorridos */
 
-var kmPorSesion = {
-    nombre: 'Juan',
-    sesion1: 2.4,
-    sesion2: 3,
-    sesion3: 2.7,
-    sesion4: 2.9,
-    numSesiones: 4,
-    anotar:(km1, km2,  km3, km4)=>{
-        var totalKm = (km1+km2+km3+km4)
-        return totalKm
-    },
-    media: (sesiones, kms)=>{
-        var mediana = kms/sesiones
+/* //Creamos la clase
+class Ficha{
+    //Creamos e constructor con los datos solicitados
+    constructor(nombre, sesiones, numSesiones){
+    this.nombre = nombre;
+    this.sesiones = sesiones;
+    this.numSesiones = numSesiones;
+    }
+    //Creamos los métodos
+    anotar (km){
+        //Km por sesiones
+        this.sesiones += km
+        //Aumenta num por sesión
+        this.numSesiones++
+    }
+    media (){
+        //Operación e mediana
+        var mediana = this.sesiones/this.numSesiones
         return mediana
     }
 }
-
+//Variable con valores
+var ficha = new Ficha('Juan', 3, 4)
+//Resultado de la media en un mensaje
+console.log(`La media de ${ficha.nombre} en kilometros recorridos es de ${ficha.media()}Km`) */
 
 //-------------------------------------LO BÁSICO DEL DOOM-------------------------------------
 /* 1. y 2.
