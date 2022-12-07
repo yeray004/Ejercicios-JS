@@ -448,4 +448,4 @@ aparece en el código de la página.
 ALGO DE EVENTOS 
 Cambio HTML */
 
-//Líneas 70-76 doom.html
+//Líneas 70-75 doom.html
